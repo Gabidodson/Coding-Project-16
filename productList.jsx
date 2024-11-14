@@ -4,7 +4,7 @@ function ProductList ({products}) {
     return(
         <div className = "product list">
             {products.map(product =>(
-                <ProductItem product = {product}/>
+                <ProductItem key={product.id} product={product}/>
             ))}
         </div>
     )
