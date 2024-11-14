@@ -4,6 +4,7 @@ function ProductList ({products}) {
     return(
         <div className = "product list">
             {products.map(product =>(
+                //Implement keys
                 <ProductItem key={product.id} product={product}/>
             ))}
         </div>
