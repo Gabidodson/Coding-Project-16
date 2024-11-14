@@ -7,12 +7,14 @@ function AddProductForm({addProduct}){
         price:'',
         description:'' 
     })
+    //handle submission
     const handleSubmit =(e)=>{
         e.preventDefault()
         addProduct({
             ...formData,
             price: Number(formData.price)
         })
+        //reset form fields
         setFormData({
             name:'',
             price:'',
@@ -36,6 +38,7 @@ function AddProductForm({addProduct}){
             required
 />
 <input
+//price
 type="text"
 name="price"
 value={formData.price}
@@ -44,6 +47,7 @@ placeholder="Price"
 min="0"
 step="0.01"
 required/>
+
 
 <textarea
 name="description"

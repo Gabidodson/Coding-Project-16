@@ -26,9 +26,17 @@ function App (){
 
         }
     ])
+    //Pass Data Between Components
+    const addProduct =(newProduct)=>{
+        const productWithId={
+            ...newProduct,
+            id: Date.now()
+        }
+    }
     return (
         <div>
             <h1>App Product Dashboard</h1>
+            <AddProductForm addProduct={addProduct}/>
             <ProductList products={products}/>
         </div>
     )
